@@ -1,0 +1,12 @@
+{
+	"autoConfig" : true,
+	"version":"1.0",
+	"port" : 8888,
+	"environment" : [
+	],
+	"tier" : "backend",
+	"owner" : "",
+	"labels" : {
+		"group":"demoapp"
+	}
+}

@@ -10,14 +10,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by linux on 29/11/16.
  */
 @Controller
-@RequestMapping(value = "/api/v1/dockerapi")
 public class TestController {
 
-    @RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/health", method = RequestMethod.GET)
+    public ResponseEntity<String> testHealth(){
+        return new ResponseEntity<>("success", HttpStatus.OK);
+    }
+
+	@RequestMapping(value = "/api/v1/dockerapi", method = RequestMethod.GET)
     public ResponseEntity<String> test(){
-
-    	System.out.println("hello via spring docker");
-
         return new ResponseEntity<>("hello via spring docker", HttpStatus.OK);
     }
 
